@@ -1,8 +1,11 @@
 import pandas as pd
 import plotly.express as px
 import streamlit as st
-     
-car_data = pd.read_csv(r"C:\Users\marpe\OneDrive\Sprint 7\Proyecto Sprint 7\vehicles_us.csv") # leer los datos
+
+base_path = os.path.dirname(__file__)
+file_path = os.path.join(base_path, "vehicles_us.csv")
+
+car_data = pd.read_csv("vehicles_us.csv") # leer los datos
 st.header('Anuncios de venta de coches')
 
 build_histogram = st.checkbox('Construir histograma') # crear un botón
